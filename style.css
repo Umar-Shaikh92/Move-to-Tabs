@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Boogaloo&family=Cookie&family=Dancing+Script:wght@400..700&family=Kaushan+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rancho&family=Saira:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(226, 241, 255);
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  max-width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.container h1 {
+    padding-bottom: 30px;
+}
+
+.container .wrapper {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+}
+
+.container .wrapper .imageWrapper {
+  display: flex;
+  width: 50%;
+}
+
+.container .wrapper .imageWrapper img {
+  width: 100%;
+  border-radius: 7px;
+}
+
+.container .wrapper .contentWrapper {
+  width: 50%;
+  background-color: rgb(255, 255, 255);
+  border-radius: 7px;
+}
+
+.container .wrapper .contentWrapper .btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(213, 213, 213);
+  border-top-right-radius: 7px;
+  border-top-left-radius: 7px;
+}
+
+.container .wrapper .contentWrapper .btns button {
+  padding: 10px 25px;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+.container .wrapper .contentWrapper .content {
+  padding: 20px;
+  line-height: 20px;
+  font-size: 14px;
+  margin-top: 25px;
+}
+
+.container .wrapper .contentWrapper .content #para:first-letter {
+  font-size: 34px;
+  font-family: "Cookie", cursive;
+  font-weight: bold;
+}
+
+.container .wrapper .contentWrapper .btns button.active {
+  background-color: #bcbcbc;
+  color: rgb(0, 0, 0);
+  border-radius: 5px;
+  border-bottom: 4px solid black;
+  border-top: 4px solid black;
+}
+
+.imageWrapper img {
+  transition: opacity 0.5s ease-in-out;
+}
+
+.content p {
+  opacity: 1;
+  transition: opacity 3s ease-in-out;
+}
+
+
+
+@media only screen and (max-width: 1120px) {
+    .container {
+        max-width: 85%;
+    }
+}
+@media only screen and (max-width: 790px) {
+    .container {
+        max-width: 90%;
+        padding: 25px;
+    }
+    .wrapper {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .container .wrapper .imageWrapper {
+        z-index: -1;
+    position: relative;
+    top: -10%;
+    left: 5%;
+
+    width: 80%;
+    height: 80%;
+    }
+    .container .wrapper .contentWrapper {
+        z-index: -1;
+
+        width: 80%;
+    }
+    .container .wrapper .contentWrapper .content {
+font-size: 12px;
+margin-top: 0;
+line-height: 14px;
+    }
+.container .wrapper .contentWrapper .btns button {
+padding: 7px 10px;
+font-size: 12px;
+}
+}
+
+@media only screen and (max-width: 410px) {
+    .container .wrapper .imageWrapper {
+width: 100%;
+    }
+    .container .wrapper .contentWrapper {
+width: 100%;
+    }
+}
